@@ -48,6 +48,17 @@ def move():
     else:
         snake.pop(0)
 
+    # Hacer que la comida se mueva de forma aleatoria probablidad de 1/10
+    if randrange(0, 10) == 0:
+        # Cambiar la posicion de forma aleatorio arriba abajo, izquierda o derecha o en diagional un casilla que es igual a 10 pixeles.
+        food.x += randrange(-1, 2) * 10
+        food.y += randrange(-1, 2) * 10
+
+        # Comprobar si la comida esta dentro de los limites, si esto no se cumple, se revierten las coordenadas.
+        if not inside(food):
+            food.x -= randrange(-1, 2) * 10
+            food.y -= randrange(-1, 2) * 10
+
     clear()
 
     for body in snake:
