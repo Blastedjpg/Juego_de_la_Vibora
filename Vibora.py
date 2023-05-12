@@ -1,5 +1,5 @@
 """Snake, classic arcade game.
-
+"Semana Tec "
 Exercises
 
 1. How do you make the snake faster or slower?
